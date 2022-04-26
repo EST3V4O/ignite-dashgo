@@ -1,10 +1,9 @@
-import { Box, Flex, Heading, Button, Icon, Table, Thead, Tr, Th, Tbody, Td, Checkbox, Text, useBreakpointValue } from '@chakra-ui/react'
-import Link from 'next/link'
-import { RiAddLine, RiPencilLine } from 'react-icons/ri'
-
-import { Header } from '../../components/Header'
-import { Pagination } from '../../components/Pagination'
-import { Sidebar } from '../../components/Sidebar'
+import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
+import Link from "next/link";
+import { RiAddLine, RiPencilLine } from "react-icons/ri";
+import { Header } from "../../components/Header";
+import { Pagination } from "../../components/Pagination";
+import { Sidebar } from "../../components/Sidebar";
 
 export default function UserList() {
   const isWideVersion = useBreakpointValue({
@@ -17,15 +16,13 @@ export default function UserList() {
       <Header />
 
       <Flex
-        w="100%"
-        my="6"
-        maxWidth={1480}
-        mx="auto"
+        w="100%" my="6" maxWidth={1400} mx="auto"
         px="6"
       >
         <Sidebar />
 
         <Box
+<<<<<<< HEAD
           flex="1"
           borderRadius={8}
           bg="gray.800"
@@ -39,12 +36,24 @@ export default function UserList() {
             <Heading
               size="lg"
               fontWeight="normal"
+=======
+          flex="1" borderRadius={8} bg="gray.800"
+          p="8"
+        >
+          <Flex
+            mb="8" justify="space-between"
+            align="center"
+          >
+            <Heading
+              size="lg" fontWeight="normal"
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
             >
               Usuários
             </Heading>
 
             <Link href="/users/create" passHref>
               <Button
+<<<<<<< HEAD
                 as="a"
                 size="sm"
                 fontSize="sm"
@@ -52,6 +61,13 @@ export default function UserList() {
                 leftIcon={<Icon as={RiAddLine} fontSize="20" />}
               >
                 Criar Novo
+=======
+                as="a" size="sm" fontSize="sm"
+                colorScheme="pink" 
+                leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+              >
+                  Criar novo
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
               </Button>
             </Link>
           </Flex>
@@ -61,6 +77,7 @@ export default function UserList() {
           >
             <Thead>
               <Tr>
+<<<<<<< HEAD
                 <Th px={["4", "4", "6"]} color="gray.300" width="8">
                   <Checkbox
                     colorScheme="pink"
@@ -69,11 +86,20 @@ export default function UserList() {
                 <Th>Usuário</Th>
                 { isWideVersion && (<Th>Data de cadastro</Th>) }
                 <Th width="8"></Th>
+=======
+                <Th px={["4", "4", "6"]} color="gray.300" w="8">
+                  <Checkbox colorScheme="pink" />
+                </Th>
+                <Th>Usuário</Th>
+                { isWideVersion && <Th>Data de cadastro</Th> }
+                { isWideVersion && <Th w="8" /> }
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td px={["4", "4", "6"]}>
+<<<<<<< HEAD
                   <Checkbox
                     colorScheme="pink"
                   />
@@ -113,6 +139,9 @@ export default function UserList() {
                   <Checkbox
                     colorScheme="pink"
                   />
+=======
+                  <Checkbox colorScheme="pink" />
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
                 </Td>
                 <Td>
                   <Box>
@@ -129,6 +158,7 @@ export default function UserList() {
                     </Text>
                   </Box>
                 </Td>
+<<<<<<< HEAD
                 { isWideVersion && (<Td>04 de Dezembro, 2021</Td>) }
                 <Td>
                   { isWideVersion && (
@@ -137,10 +167,19 @@ export default function UserList() {
                       size="sm"
                       fontSize="sm"
                       colorScheme="purple"
+=======
+                { isWideVersion && <Td>20 de Abril, 2022</Td> }
+                { isWideVersion && (
+                  <Td>
+                    <Button
+                      as="a" size="sm" fontSize="sm"
+                      colorScheme="purple" 
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
                       leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
                     >
                       Editar
                     </Button>
+<<<<<<< HEAD
                   ) }
                 </Td>
               </Tr>
@@ -179,13 +218,24 @@ export default function UserList() {
                     </Button>
                   ) }
                 </Td>
+=======
+                  </Td>
+                ) }
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
               </Tr>
             </Tbody>
           </Table>
 
           <Pagination />
         </Box>
+<<<<<<< HEAD
         </Flex>
     </Box>
   )
 }
+=======
+      </Flex>
+    </Box>
+  )
+} 
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b

@@ -1,7 +1,7 @@
 import { Flex, Button, Stack } from '@chakra-ui/react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from 'yup'
-import { yupResolver } from '@hookform/resolvers/yup'
 import { Input } from '../components/Form/Input'
 
 type SignInFormData = {
@@ -10,16 +10,14 @@ type SignInFormData = {
 }
 
 const signInFormSchema = yup.object().shape({
-  email: yup.string().required("E-mail obrigatório").email("E-mail inválido"),
-  password: yup.string().required("Senha obrigatória")
+  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+  password: yup.string().required('Senha obrigatória')
 })
 
 export default function SignIn() {
-  const { register, handleSubmit, formState } = useForm({
+  const { register, handleSubmit, formState } = useForm<SignInFormData>({
     resolver: yupResolver(signInFormSchema)
   })
-
-  const { errors } = formState
 
   const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -27,6 +25,11 @@ export default function SignIn() {
     console.log(values)
   }
 
+<<<<<<< HEAD
+=======
+  const { errors } = formState
+
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
   return (
     <Flex
       w="100vw"
@@ -47,18 +50,30 @@ export default function SignIn() {
         <Stack spacing="4">
           <Input
             type="email"
+<<<<<<< HEAD
             name="email"
             label="E-mail"
             error={errors.email}
             {...register("email")}
+=======
+            label="E-mail"
+            error={errors.email}
+            { ...register('email') }
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
           />
 
           <Input
             type="password"
+<<<<<<< HEAD
             name="password"
             label="Senha"
             error={errors.password}
             {...register("password")}
+=======
+            label="Senha"
+            error={errors.password}
+            { ...register('password') }
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
           />
         </Stack>
 

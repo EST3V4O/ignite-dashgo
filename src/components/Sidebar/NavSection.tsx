@@ -1,5 +1,6 @@
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Box, Icon, Link, Stack, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import { RiContactsLine, RiDashboardLine } from "react-icons/ri";
 
 interface NavSectionProps {
   title: string;
@@ -10,18 +11,23 @@ export function NavSection({ title, children }: NavSectionProps) {
   return (
     <Box>
       <Text
-        fontWeight="bold"
-        color="gray.400"
+        fontWeight="bold" color="gray.400"
         fontSize="small"
       >
         {title}
       </Text>
       <Stack
+<<<<<<< HEAD
         spacing="4"
         mt="8"
         align="stretch"
       >
         {children}
+=======
+        spacing="4" mt="8" align="stretch"
+      >
+        { children }
+>>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
       </Stack>
     </Box>
   )
