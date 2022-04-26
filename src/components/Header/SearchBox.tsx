@@ -5,7 +5,7 @@ export function SearchBox() {
   return (
     <Flex
       as="label"
-      flex="q"
+      flex="1"
       py="4"
       px="8"
       ml="6"
@@ -24,8 +24,10 @@ export function SearchBox() {
         placeholder="Buscar na plataforma"
         _placeholder={{ color: "gray.400" }}
       />
-
-      <Icon as={RiSearchLine} fontSize="20" />
+      <Icon
+        as={RiSearchLine}
+        fontSize="20"
+      />
     </Flex>
   )
 }

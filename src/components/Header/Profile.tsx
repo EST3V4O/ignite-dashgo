@@ -4,16 +4,13 @@ interface ProfileProps {
   showProfileData: boolean;
 }
 
-export function Profile({ showProfileData }: ProfileProps) {
+export function Profile({ showProfileData = true }: ProfileProps) {
   return (
     <Flex
       align="center"
     >
       { showProfileData && (
-        <Box
-          mr="4"
-          textAlign="right"
-        >
+        <Box mr="4" textAlign="right" >
           <Text>Estevão Gabriel</Text>
           <Text
             color="gray.300"
@@ -24,7 +21,11 @@ export function Profile({ showProfileData }: ProfileProps) {
         </Box>
       ) }
 
-      <Avatar size="md" name="Estevão Gabriel" src="https://github.com/EST3V4O.png" />
+      <Avatar
+        size="md"
+        name="Estevão Gabriel"
+        src="https://github.com/EST3V4O.png"
+      />
     </Flex>
   )
 }
