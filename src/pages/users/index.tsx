@@ -16,7 +16,7 @@ export default function UserList() {
       <Header />
 
       <Flex
-        w="100%" my="6" maxWidth={1400} mx="auto"
+        w="100%" my="6" maxWidth={1320} mx="auto"
         px="6"
       >
         <Sidebar />
