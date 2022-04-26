@@ -34,13 +34,7 @@ export function Sidebar() {
 
   return (
     <Box
-<<<<<<< HEAD
-      as="aside"
-      w="64"
-      mr="8"
-=======
       as="aside" w="64" mr="8"
->>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
     >
       <SidebarNav />
     </Box>

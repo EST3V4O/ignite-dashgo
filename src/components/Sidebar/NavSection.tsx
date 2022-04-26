@@ -17,17 +17,9 @@ export function NavSection({ title, children }: NavSectionProps) {
         {title}
       </Text>
       <Stack
-<<<<<<< HEAD
-        spacing="4"
-        mt="8"
-        align="stretch"
-      >
-        {children}
-=======
         spacing="4" mt="8" align="stretch"
       >
         { children }
->>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
       </Stack>
     </Box>
   )

@@ -25,11 +25,8 @@ export default function SignIn() {
     console.log(values)
   }
 
-<<<<<<< HEAD
-=======
   const { errors } = formState
 
->>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
   return (
     <Flex
       w="100vw"
@@ -50,30 +47,16 @@ export default function SignIn() {
         <Stack spacing="4">
           <Input
             type="email"
-<<<<<<< HEAD
-            name="email"
-            label="E-mail"
-            error={errors.email}
-            {...register("email")}
-=======
             label="E-mail"
             error={errors.email}
             { ...register('email') }
->>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
           />
 
           <Input
             type="password"
-<<<<<<< HEAD
-            name="password"
-            label="Senha"
-            error={errors.password}
-            {...register("password")}
-=======
             label="Senha"
             error={errors.password}
             { ...register('password') }
->>>>>>> 66245bf1e2c0193fa4c92b0cd906b77d7088ea5b
           />
         </Stack>
 
