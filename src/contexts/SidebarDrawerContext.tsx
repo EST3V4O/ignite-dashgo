@@ -2,7 +2,7 @@ import { useDisclosure, UseDisclosureReturn } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { createContext, ReactNode, useContext, useEffect } from "react";
 
-type SidebarDrawerContextData  = UseDisclosureReturn 
+type SidebarDrawerContextData = UseDisclosureReturn
 
 const SidebarDrawerContext = createContext({} as SidebarDrawerContextData)
 
@@ -20,7 +20,7 @@ export function SidebarDrawerProvider({ children }: SidebarDrawerProviderProps) 
 
   return (
     <SidebarDrawerContext.Provider value={disclosure}>
-      {children}
+      { children }
     </SidebarDrawerContext.Provider>
   )
 }
